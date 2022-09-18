@@ -25,30 +25,34 @@ const FloatingNavBar = () => {
         showNavbar
           ? "opacity-100 top-2 duration-500 ease-out"
           : "opacity-0 -top-full duration-300 ease-in"
-      } fixed max-w-screen-3xl left-[50%] -translate-x-1/2 flex items-center w-11/12 bg-primary-purple py-2 justify-between md:justify-around md:py-3 rounded-xl px-4 md:px-0`}
+      } fixed max-w-screen-3xl left-[50%] -translate-x-1/2 flex z-[9000] items-center w-11/12 bg-primary-purple py-2 justify-between md:justify-around md:py-3 3xl:py-5 rounded-lg px-4 md:px-0`}
     >
-      <div className="h-12 w-auto md:h-14">
+      <div className="h-11 w-auto md:h-14 3xl:h-16">
         <MySignature className="fill-text-black" />
       </div>
       <ul className="hidden md:flex space-x-6 xmd:space-x-12">
-        <li className="text-base-font font-semibold text-black">About Me</li>
-        <li className="text-base-font font-semibold text-black">
+        <li className="text-base-font 3xl:text-lg-font font-semibold text-black">
+          About Me
+        </li>
+        <li className="text-base-font 3xl:text-lg-font font-semibold text-black">
           Featured Projects
         </li>
-        <li className="text-base-font font-semibold text-black">Skills</li>
+        <li className="text-base-font 3xl:text-lg-font font-semibold text-black">
+          Skills
+        </li>
       </ul>
-      <ul className="hidden md:flex space-x-4 xmd:space-x-6">
-        <li className="h-6 w-auto">
+      <ul className="hidden md:flex space-x-4 xmd:space-x-6 3xl:space-x-8">
+        <li className="h-6 3xl:h-7 w-auto">
           <Mail className="fill-text-black" />
         </li>
-        <li className="h-6 w-auto">
+        <li className="h-6 3xl:h-7 w-auto">
           <Github className="fill-text-black" />
         </li>
-        <li className="h-6 w-auto">
+        <li className="h-6 3xl:h-7 w-auto">
           <Linkedin className="fill-text-black" />
         </li>
       </ul>
-      <span className="h-8 w-auto md:hidden">
+      <span className="h-6 w-auto md:hidden">
         <HamburgerMenu className="fill-text-black" />
       </span>
     </nav>
