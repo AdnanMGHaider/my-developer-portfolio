@@ -4,7 +4,7 @@ import LargeScreenHeroSection from "./LargeScreenHeroSection/LargeScreenHeroSect
 
 const HeroSection = () => {
   return (
-    <section className="bg-heroSectionBgImg relative overflow-x-hidden">
+    <section className="bg-heroSectionBgImg bg-cover bg-center relative overflow-x-hidden">
       <div className="absolute w-[20%] h-[15%] md:h-[30%] right-[10%] top-[20%] md:-top-[5%] rounded-full lilac__glow" />
       <HeroSectionNavBar />
       <SmallScreenHeroSection />

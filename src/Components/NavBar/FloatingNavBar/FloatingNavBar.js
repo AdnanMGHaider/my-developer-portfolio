@@ -10,7 +10,7 @@ const FloatingNavBar = () => {
   const [showNavbar, setShowNavbar] = useState(false);
 
   const fadeInNavbar = () => {
-    if (window.scrollY >= 50) {
+    if (window.scrollY >= 150) {
       setShowNavbar(true);
     } else {
       setShowNavbar(false);
@@ -25,7 +25,7 @@ const FloatingNavBar = () => {
         showNavbar
           ? "opacity-100 top-2 duration-500 ease-out"
           : "opacity-0 -top-full duration-300 ease-in"
-      } fixed max-w-screen-3xl left-[50%] -translate-x-1/2 flex z-[9000] items-center w-11/12 bg-primary-purple py-2 justify-between md:justify-around md:py-3 3xl:py-5 rounded-lg px-4 md:px-0`}
+      } fixed left-[50%] -translate-x-1/2 flex z-[9000] items-center w-11/12 max-w-[90rem] bg-primary-purple py-2 justify-between md:justify-around md:py-3 3xl:py-5 rounded-md px-4 md:px-0`}
     >
       <div className="h-11 w-auto md:h-14 3xl:h-16">
         <MySignature className="fill-text-black" />

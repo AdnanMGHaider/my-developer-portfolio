@@ -35,10 +35,20 @@ module.exports = {
         "background-purple": "#1a091c",
         "text-black": "#090309",
         "primary-purple": "#b85aff",
+        "primary-purple-variation-1": "#cd8cff",
         "text-white": "#f8efff",
+        "text-grey": "#857D8B",
+        "footer-purple": "#2b0f2f",
       },
       backgroundImage: {
         heroSectionBgImg: "url('~/src/Assets/Images/HeroSectionBg.png')",
+        wallBgImg: "url('~/src/Assets/Images/WallBg.png')",
+        aboutMeDescriptionSticker:
+          "url('~/src/Assets/Images/AboutMeDescriptionSticker.png')",
+        contactMeFormSticker:
+          "url('~/src/Assets/Images/ContactMeFormSticker.png')",
+        smallScreenProjectsCardSticker:
+          "url('~/src/Assets/Images/SmallScreenProjectsCardSticker.png')",
         // heroBgImg:
         //   "url('~/src/Assets/Images/BgWithoutGlowWithoutTornEffect.png')",
         // wallBgShortLgScreen: "url('~/src/Assets/Images/WallBgShortLgScr.png')",

@@ -9,7 +9,7 @@ import Button from "../../../../Components/Button";
 
 const LargeScreenHeroSection = () => {
   return (
-    <div className="hidden md:block w-11/12 xl:w-10/12 2xl:w-9/12 mx-auto py-8 xmd:py-10">
+    <div className="hidden md:block w-11/12 xl:w-10/12 2xl:w-9/12 mx-auto py-8 md:pb-0 xmd:pt-10">
       <div className="grid grid-cols-2 gap-x-8 xmd:gap-x-12 lg:gap-x-16 2xl:gap-x-20">
         <div>
           <img
