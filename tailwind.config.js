@@ -23,11 +23,11 @@ module.exports = {
         ] /*18.22px*/,
         "xl-font": [
           "1.296rem",
-          { letterSpacing: "0.025em", lineHeight: "2rem" },
+          { letterSpacing: "0.025em", lineHeight: "2.4rem" },
         ] /*20.74px*/,
         "2xl-font": [
           "1.383rem",
-          { letterSpacing: "0.025em", lineHeight: "2.1rem" },
+          { letterSpacing: "0.025em", lineHeight: "2.6rem" },
         ] /*22.13px*/,
       },
       colors: {

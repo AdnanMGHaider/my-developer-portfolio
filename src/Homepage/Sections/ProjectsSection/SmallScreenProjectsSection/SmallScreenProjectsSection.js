@@ -10,9 +10,7 @@ const SmallScreenProjectsSection = () => {
         <p className="text-xsm-font text-text-grey">Swipe to view more</p>
         <ArrowRight className="w-8 fill-text-grey" />
       </div>
-      {/* <div className="max-w-[40rem] bg-smallScreenProjectsCardSticker bg-center bg-cover p-4 rounded-md">
-        SmallScrProjectsSection
-      </div> */}
+      <ProjectsCarousel />
     </>
   );
 };

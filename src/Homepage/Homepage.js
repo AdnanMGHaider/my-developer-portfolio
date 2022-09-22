@@ -9,7 +9,7 @@ import FooterSection from "./Sections/FooterSection/FooterSection";
 
 const Homepage = () => {
   return (
-    <div className="bg-red-200">
+    <div className="bg-background-purple">
       <FloatingNavBar />
       <div className="max-w-screen-3xl mx-auto bg-wallBgImg bg-repeat-y bg-center">
         <HeroSection />
