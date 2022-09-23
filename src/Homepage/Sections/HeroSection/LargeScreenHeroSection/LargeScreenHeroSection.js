@@ -6,6 +6,8 @@ import Github from "../../../../Assets/SVG/Icons/Github";
 import Linkedin from "../../../../Assets/SVG/Icons/Linkedin";
 import ArrowDown from "../../../../Assets/SVG/Icons/ArrowDown";
 import Button from "../../../../Components/Button";
+import Tippy from "@tippyjs/react";
+import "tippy.js/dist/tippy.css";
 
 const LargeScreenHeroSection = () => {
   return (
@@ -38,15 +40,21 @@ const LargeScreenHeroSection = () => {
               Get In Touch
             </Button>
             <div className="flex space-x-4 lg:space-x-6 3xl:space-x-8">
-              <span>
-                <Mail className="h-6 xmd:h-7 3xl:h-8 w-auto fill-accent-orange" />
-              </span>
-              <span>
-                <Github className="h-6 xmd:h-7 3xl:h-8 w-auto fill-accent-orange" />
-              </span>
-              <span>
-                <Linkedin className="h-6 xmd:h-7 3xl:h-8 w-auto fill-accent-orange" />
-              </span>
+              <Tippy content="Send me an Email">
+                <span>
+                  <Mail className="h-6 xmd:h-7 3xl:h-8 w-auto fill-accent-orange cursor-pointer" />
+                </span>
+              </Tippy>
+              <Tippy content="Github">
+                <span>
+                  <Github className="h-6 xmd:h-7 3xl:h-8 w-auto fill-accent-orange cursor-pointer" />
+                </span>
+              </Tippy>
+              <Tippy content="Linkedin">
+                <span>
+                  <Linkedin className="h-6 xmd:h-7 3xl:h-8 w-auto fill-accent-orange cursor-pointer" />
+                </span>
+              </Tippy>
             </div>
           </div>
         </div>

@@ -8,7 +8,9 @@ const LargeScreenProjectsSection = () => {
         <div className="w-11/12 mx-auto">
           <h3 className="text-center text-base-font xs:text-lg-font xmd:text-xl-font font-medium text-primary-purple-variation-1 md:mb-14 lg:mb-16 xl:mb-20">
             I'm constantly learning and building things using various
-            technologies. Some of them are featured below.
+            technologies.
+            <br />
+            Some of them are featured below
           </h3>
         </div>
       </div>
