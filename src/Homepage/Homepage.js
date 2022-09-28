@@ -6,10 +6,15 @@ import ProjectsSection from "./Sections/ProjectsSection/ProjectsSection";
 import SkillsSection from "./Sections/SkillsSection/SkillsSection";
 import ContactMeSection from "./Sections/ContactMeSection/ContactMeSection";
 import FooterSection from "./Sections/FooterSection/FooterSection";
+import { motion } from "framer-motion";
 
 const Homepage = () => {
   return (
-    <div className="bg-background-purple">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      className="bg-background-purple"
+    >
       <FloatingNavBar />
       <div className="max-w-screen-3xl mx-auto bg-wallBgImg bg-repeat-y bg-center">
         <HeroSection />
@@ -26,7 +31,7 @@ const Homepage = () => {
         <ContactMeSection />
         <FooterSection />
       </div>
-    </div>
+    </motion.div>
   );
 };
 

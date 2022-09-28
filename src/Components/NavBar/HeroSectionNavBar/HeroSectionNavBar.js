@@ -1,9 +1,19 @@
 import MySignature from "../../../Assets/SVG/MySignature";
 import HamburgerMenu from "../../../Assets/SVG/Icons/HamburgerMenu";
+import { motion } from "framer-motion";
 
 const HeroSectionNavBar = () => {
   return (
-    <nav className="w-11/12 relative z-[8999] mx-auto flex items-center justify-between py-4 3xl:py-8">
+    <motion.nav
+      initial={{ opacity: 0, y: -180 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{
+        ease: "easeInOut",
+        duration: 1,
+        // delay: 0.6,
+      }}
+      className="w-11/12 relative z-[8999] mx-auto flex items-center justify-between py-4 3xl:py-8"
+    >
       <div className="h-11 w-auto md:h-14 3xl:h-16">
         <MySignature className="fill-text-white" />
       </div>
@@ -21,7 +31,7 @@ const HeroSectionNavBar = () => {
       <span className="h-6 w-auto md:hidden">
         <HamburgerMenu className="fill-text-white" />
       </span>
-    </nav>
+    </motion.nav>
   );
 };
 

@@ -1,0 +1,50 @@
+.signaturePath1 {
+  stroke-dasharray: 2765.13525390625;
+  stroke-dashoffset: 2765.13525390625;
+  animation-name: Path1Animation;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-iteration-count: 1;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes Path1Animation {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.signaturePath2 {
+  stroke-dasharray: 657.6834716796875;
+  stroke-dashoffset: 657.6834716796875;
+  animation-name: Path2Animation;
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+  animation-iteration-count: 1;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+}
+
+.signaturePath3 {
+  stroke-dasharray: 6433.5791015625;
+  stroke-dashoffset: 6433.5791015625;
+  animation-name: Path3Animation;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-iteration-count: 1;
+  animation-delay: 2.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes Path2Animation {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes Path3Animation {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
