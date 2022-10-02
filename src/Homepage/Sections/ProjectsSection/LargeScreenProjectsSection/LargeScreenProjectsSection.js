@@ -14,7 +14,7 @@ const LargeScreenProjectsSection = () => {
           </h3>
         </div>
       </div>
-      <div className="flex flex-col gap-y-12 lg:gap-y-16 xl:gap-y-20">
+      <div className="flex flex-col gap-y-28 lg:gap-y-32 xl:gap-y-36">
         <RightAlignedProject />
         <LeftAlignedProject />
         <RightAlignedProject />

@@ -1,84 +1,88 @@
-import { useState } from "react";
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 import Button from "../../../../Components/Button";
 import Send from "../../../../Assets/SVG/Icons/Send";
 
 const ContactMeForm = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [subject, setSubject] = useState("");
-  const [message, setMessage] = useState("");
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_t0clkaf",
+        "template_g3wesgv",
+        form.current,
+        "Cp0b-EvcltDSG-K7l"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          alert("Your message has been sent");
+          e.target.reset();
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
   return (
-    <form className="flex flex-col gap-y-6 2xs:gap-y-8 sm:gap-y-10 2xl:gap-y-12">
+    <form
+      className="flex flex-col gap-y-6 2xs:gap-y-8 sm:gap-y-10 2xl:gap-y-12"
+      ref={form}
+      onSubmit={sendEmail}
+    >
       <div className="flex flex-col gap-y-2">
-        <label
-          className="text-sm-font 2xs:text-base-font xmd:text-lg-font"
-          htmlFor="name"
-        >
+        <label className="text-sm-font 2xs:text-base-font xmd:text-lg-font">
           Your Name
         </label>
         <input
           className="rounded-md text-text-white w-full bg-primary-purple/[.1] border-[1px] border-primary-purple text-sm-font xmd:text-base-font p-2 sm:p-3 2xl:p-4 placeholder:italic placeholder:text-text-grey focus:outline-none focus:border-primary-purple focus:ring-2 focus:ring-primary-purple"
           type="text"
           placeholder="E.g. 'John Doe'"
-          id="name"
-          name="name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
+          name="from_name"
         />
       </div>
       <div className="flex flex-col gap-y-2">
-        <label
-          className="text-sm-font 2xs:text-base-font xmd:text-lg-font"
-          htmlFor="name"
-        >
+        <label className="text-sm-font 2xs:text-base-font xmd:text-lg-font">
           Your Email
         </label>
         <input
           className="rounded-md text-text-white w-full bg-primary-purple/[.1] border-[1px] border-primary-purple text-sm-font xmd:text-base-font p-2 sm:p-3 2xl:p-4 placeholder:italic placeholder:text-text-grey focus:outline-none focus:border-primary-purple focus:ring-2 focus:ring-primary-purple"
           type="email"
           placeholder="E.g. 'JohnDoe@gmail.com'"
-          id="email"
-          name="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          name="user_email"
         />
       </div>
       <div className="flex flex-col gap-y-2">
-        <label
-          className="text-sm-font 2xs:text-base-font xmd:text-lg-font"
-          htmlFor="subject"
-        >
+        <label className="text-sm-font 2xs:text-base-font xmd:text-lg-font">
           Subject of your message
         </label>
         <input
           className="rounded-md text-text-white w-full bg-primary-purple/[.1] border-[1px] border-primary-purple text-sm-font xmd:text-base-font p-2 sm:p-3 2xl:p-4 placeholder:italic placeholder:text-text-grey focus:outline-none focus:border-primary-purple focus:ring-2 focus:ring-primary-purple"
           type="text"
-          placeholder="E.g. 'Project Opportunity'"
-          id="subject"
           name="subject"
-          value={subject}
-          onChange={(e) => setSubject(e.target.value)}
+          placeholder="E.g. 'Project Opportunity'"
         />
       </div>
       <div className="flex flex-col gap-y-2">
-        <label
-          className="text-sm-font 2xs:text-base-font xmd:text-lg-font"
-          htmlFor="message"
-        >
-          Your Message
+        <label className="text-sm-font 2xs:text-base-font xmd:text-lg-font">
+          Message
         </label>
         <textarea
-          className="rounded-md text-text-white w-full bg-primary-purple/[.1] border-[1px] border-primary-purple text-sm-font xmd:text-base-font p-2 sm:p-3 2xl:p-4 placeholder:italic placeholder:text-text-grey focus:outline-none focus:border-primary-purple focus:ring-2 focus:ring-primary-purple"
           rows="6"
-          type="text"
           placeholder="E.g. 'There is a design and development project...'"
-          id="message"
+          className="rounded-md text-text-white w-full bg-primary-purple/[.1] border-[1px] border-primary-purple text-sm-font xmd:text-base-font p-2 sm:p-3 2xl:p-4 placeholder:italic placeholder:text-text-grey focus:outline-none focus:border-primary-purple focus:ring-2 focus:ring-primary-purple"
           name="message"
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
         />
       </div>
-      <Button className="mx-auto md:mt-4" icon={<Send />}>
+      <Button
+        className="mx-auto md:mt-4"
+        type="submit"
+        value="Send"
+        icon={<Send />}
+      >
         Send Message
       </Button>
     </form>

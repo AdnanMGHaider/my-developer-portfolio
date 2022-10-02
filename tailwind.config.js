@@ -49,16 +49,6 @@ module.exports = {
           "url('~/src/Assets/Images/ContactMeFormSticker.png')",
         smallScreenProjectsCardSticker:
           "url('~/src/Assets/Images/SmallScreenProjectsCardSticker.png')",
-        // heroBgImg:
-        //   "url('~/src/Assets/Images/BgWithoutGlowWithoutTornEffect.png')",
-        // wallBgShortLgScreen: "url('~/src/Assets/Images/WallBgShortLgScr.png')",
-        // wallBgShortSmScreen: "url('~/src/Assets/Images/WallBgShortSmScr.png')",
-        // wallBgLongLgScreen: "url('~/src/Assets/Images/WallBgLongLgScr.png')",
-        // wallBgLongSmScreen: "url('~/src/Assets/Images/WallBgLongSmScr.png')",
-        // "about-me-paragraph-sticker":
-        //   "url('~/src/Assets/Images/AboutMeParagraphSticker.png')",
-        // "contact-form-sticker":
-        //   "url('~/src/Assets/Images/ContactFormSticker.png')",
       },
     },
     screens: {

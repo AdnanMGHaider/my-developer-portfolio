@@ -2,7 +2,7 @@ import MySignature from "../../../Assets/SVG/MySignature";
 import HamburgerMenu from "../../../Assets/SVG/Icons/HamburgerMenu";
 import { motion } from "framer-motion";
 
-const HeroSectionNavBar = () => {
+const HeroSectionNavBar = ({ toggle }) => {
   return (
     <motion.nav
       initial={{ opacity: 0, y: -180 }}
@@ -29,7 +29,10 @@ const HeroSectionNavBar = () => {
         </li>
       </ul>
       <span className="h-6 w-auto md:hidden">
-        <HamburgerMenu className="fill-text-white" />
+        <HamburgerMenu
+          onClick={toggle}
+          className="fill-text-white cursor-pointer"
+        />
       </span>
     </motion.nav>
   );

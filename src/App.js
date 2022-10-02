@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Homepage from "./Homepage/Homepage";
 import LoadingScreen from "./Components/LoadingScreen/LoadingScreen";
 import { AnimatePresence } from "framer-motion";
+
 function App() {
   const [loading, setLoading] = useState(true);
 

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import FloatingNavBar from "../Components/NavBar/FloatingNavBar/FloatingNavBar";
 import HeroSection from "./Sections/HeroSection/HeroSection";
 import HeroSectionTearEffect from "../Assets/Images/HeroSectionTearEffect.png";
@@ -9,15 +10,27 @@ import FooterSection from "./Sections/FooterSection/FooterSection";
 import { motion } from "framer-motion";
 
 const Homepage = () => {
+  const [mobileNavBarIsOpen, setMobileNavBarIsOpen] = useState(false);
+
+  function toggleMobileNavBar() {
+    setMobileNavBarIsOpen(!mobileNavBarIsOpen);
+  }
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       className="bg-background-purple"
     >
-      <FloatingNavBar />
+      <FloatingNavBar
+        toggle={toggleMobileNavBar}
+        mobileNavBarIsOpen={mobileNavBarIsOpen}
+      />
       <div className="max-w-screen-3xl mx-auto bg-wallBgImg bg-repeat-y bg-center">
-        <HeroSection />
+        <HeroSection
+          toggle={toggleMobileNavBar}
+          mobileNavBarIsOpen={mobileNavBarIsOpen}
+        />
         <div className="w-full h-auto">
           <img
             src={HeroSectionTearEffect}

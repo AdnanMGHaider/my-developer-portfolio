@@ -3,6 +3,7 @@ import React from "react";
 const HamburgerMenu = (props) => {
   return (
     <svg
+      onClick={props.onClick}
       className={`${props.className} w-full h-full`}
       id="Layer_2"
       xmlns="http://www.w3.org/2000/svg"

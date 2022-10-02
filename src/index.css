@@ -25,6 +25,15 @@
   color: #f8efff;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  position: relative;
+}
+
 .orange__glow {
   background: linear-gradient(180deg, rgba(255, 208, 165, 0) 0%, #ff7a5c 100%);
   filter: blur(123px);
@@ -32,4 +41,38 @@
 .lilac__glow {
   background: linear-gradient(180deg, rgba(238, 165, 255, 0) 0%, #b85aff 100%);
   filter: blur(123px);
+}
+
+.lilac__glow2 {
+  background: linear-gradient(180deg, rgba(233, 136, 255, 0) 0%, #b049ff 100%);
+  filter: blur(120px);
+}
+
+.orange__glow2 {
+  background: linear-gradient(180deg, rgba(255, 208, 165, 0) 0%, #ff7a5c 100%);
+  filter: blur(125px);
+}
+
+@media screen and (min-width: 768px) {
+  .lilac__glow2 {
+    filter: blur(130px);
+  }
+}
+@media screen and (min-width: 920px) {
+  .lilac__glow2 {
+    filter: blur(180px);
+  }
+  .orange__glow2 {
+    filter: blur(135px);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .orange__glow2 {
+    filter: blur(155px);
+  }
+}
+@media screen and (min-width: 1280px) {
+  .orange__glow2 {
+    filter: blur(175px);
+  }
 }

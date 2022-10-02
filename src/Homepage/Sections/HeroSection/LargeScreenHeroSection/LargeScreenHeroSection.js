@@ -7,8 +7,8 @@ import Linkedin from "../../../../Assets/SVG/Icons/Linkedin";
 import ArrowDown from "../../../../Assets/SVG/Icons/ArrowDown";
 import Button from "../../../../Components/Button";
 import Tippy from "@tippyjs/react";
+import { motion } from "framer-motion";
 import "tippy.js/dist/tippy.css";
-import { useScroll, useTransform, motion } from "framer-motion";
 
 const LargeScreenHeroSection = () => {
   const hiddenMask = `repeating-linear-gradient(to left, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 50px, rgba(0,0,0,1) 50px, rgba(0,0,0,1) 50px)`;
@@ -28,6 +28,7 @@ const LargeScreenHeroSection = () => {
             alt="Adnan Haider"
           />
         </motion.div>
+
         <div className="flex flex-col justify-between">
           <motion.div
             initial={{ opacity: 0, y: 80 }}
@@ -41,6 +42,7 @@ const LargeScreenHeroSection = () => {
               alt="Sub-heading of the Hero section"
             />
           </motion.div>
+
           <motion.p
             initial={{ opacity: 0, y: 80 }}
             animate={{ opacity: 1, y: 0 }}
