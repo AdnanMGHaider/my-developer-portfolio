@@ -1,6 +1,7 @@
 import MySignature from "../../../Assets/SVG/MySignature";
 import HamburgerMenu from "../../../Assets/SVG/Icons/HamburgerMenu";
 import { motion } from "framer-motion";
+import { Link } from "react-scroll";
 
 const HeroSectionNavBar = ({ toggle }) => {
   return (
@@ -18,15 +19,21 @@ const HeroSectionNavBar = ({ toggle }) => {
         <MySignature className="fill-text-white" />
       </div>
       <ul className="hidden md:flex space-x-6 xmd:space-x-12 ">
-        <li className="text-base-font 3xl:text-lg-font font-semibold duration-200 ease-in hover:scale-110 hover:rotate-3 hover:ease-out hover:duration-200 hover:text-primary-purple-variation-1 cursor-pointer">
-          About Me
-        </li>
-        <li className="text-base-font 3xl:text-lg-font font-semibold duration-200 ease-in hover:scale-110 hover:rotate-3 hover:ease-out hover:duration-200 hover:text-primary-purple-variation-1 cursor-pointer">
-          Featured Projects
-        </li>
-        <li className="text-base-font 3xl:text-lg-font font-semibold duration-200 ease-in hover:scale-110 hover:rotate-3 hover:ease-out hover:duration-200 hover:text-primary-purple-variation-1 cursor-pointer">
-          Skills
-        </li>
+        <Link to="aboutMe" spy={true} smooth={true} duration={500}>
+          <li className="text-base-font 3xl:text-lg-font font-semibold duration-200 ease-in hover:scale-110 hover:ease-out hover:duration-200 hover:text-primary-purple-variation-1 cursor-pointer">
+            About Me
+          </li>
+        </Link>
+        <Link to="featuredProjects" spy={true} smooth={true} duration={500}>
+          <li className="text-base-font 3xl:text-lg-font font-semibold duration-200 ease-in hover:scale-110 hover:ease-out hover:duration-200 hover:text-primary-purple-variation-1 cursor-pointer">
+            Featured Projects
+          </li>
+        </Link>
+        <Link to="skills" spy={true} smooth={true} duration={500}>
+          <li className="text-base-font 3xl:text-lg-font font-semibold duration-200 ease-in hover:scale-110 hover:ease-out hover:duration-200 hover:text-primary-purple-variation-1 cursor-pointer">
+            Skills
+          </li>
+        </Link>
       </ul>
       <span className="h-6 w-auto md:hidden">
         <HamburgerMenu

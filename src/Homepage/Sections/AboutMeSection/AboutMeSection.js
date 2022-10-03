@@ -5,7 +5,10 @@ import { motion } from "framer-motion";
 
 const AboutMeSection = () => {
   return (
-    <section className="w-11/12 mx-auto pb-16 pt-16 xs:pb-20 xs:pt-20 md:pb-24 md:pt-24 xl:pb-28 xl:pt-28">
+    <section
+      id="aboutMe"
+      className="w-11/12 mx-auto pb-16 pt-16 xs:pb-20 xs:pt-20 md:pb-24 md:pt-24 xl:pb-28 xl:pt-28"
+    >
       <div className="w-52 2xs:w-56 sm:w-64 md:w-72 xl:w-80 3xl:w-96 h-auto mb-8 2xs:mb-10 xs:mb-12 sm:mb-14 md:mb-16 xmd:mb-20 mx-auto">
         <img
           src={AboutMeHeadingSticker}

@@ -28,7 +28,7 @@ const SkillsSection = () => {
   };
 
   return (
-    <section className="mx-auto py-16 xs:py-20 md:py-24 xl:py-28">
+    <section id="skills" className="mx-auto py-16 xs:py-20 md:py-24 xl:py-28">
       <div className="w-48 2xs:w-52 sm:w-60 md:w-64 xl:w-72 3xl:w-80 h-auto mb-8 2xs:mb-10 xs:mb-12 sm:mb-14 md:mb-20 xl:mb-24 mx-auto">
         <img
           src={SkillsHeadingSticker}

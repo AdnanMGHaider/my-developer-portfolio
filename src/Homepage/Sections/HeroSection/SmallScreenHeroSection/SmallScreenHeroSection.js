@@ -2,6 +2,7 @@ import MyImage from "../../../../Assets/Images/MyImage.png";
 import Button from "../../../../Components/Button";
 import ContactMe from "../../../../Assets/SVG/Icons/ContactMe";
 import { motion } from "framer-motion";
+import { Link } from "react-scroll";
 
 const SmallScreenHeroSection = () => {
   // const hiddenMask = `repeating-linear-gradient(to top, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 50px, rgba(0,0,0,1) 50px, rgba(0,0,0,1) 50px)`;
@@ -70,9 +71,11 @@ const SmallScreenHeroSection = () => {
         I enjoy crafting aesthetically pleasing, responsive and functional
         Websites and Applications
       </motion.p>
-      <Button className="mx-auto" icon={<ContactMe />}>
-        Get in touch
-      </Button>
+      <Link to="contactMe" spy={true} smooth={true} duration={500}>
+        <Button className="mx-auto" icon={<ContactMe />}>
+          Get in touch
+        </Button>
+      </Link>
     </div>
   );
 };

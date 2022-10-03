@@ -7,6 +7,7 @@ import Linkedin from "../../../../Assets/SVG/Icons/Linkedin";
 import ArrowDown from "../../../../Assets/SVG/Icons/ArrowDown";
 import Button from "../../../../Components/Button";
 import Tippy from "@tippyjs/react";
+import { Link } from "react-scroll";
 import { motion } from "framer-motion";
 import "tippy.js/dist/tippy.css";
 
@@ -61,24 +62,38 @@ const LargeScreenHeroSection = () => {
             transition={{ ease: "easeInOut", duration: 1, delay: 0.4 }}
             className="flex items-center justify-between"
           >
-            <Button icon={<ContactMe className="fill-text-black" />}>
-              Get In Touch
-            </Button>
+            <Link to="contactMe" spy={true} smooth={true} duration={500}>
+              <Button icon={<ContactMe className="fill-text-black" />}>
+                Get In Touch
+              </Button>
+            </Link>
             <div className="flex space-x-4 lg:space-x-6 3xl:space-x-8">
               <Tippy content="Send me an Email">
-                <span>
+                <a
+                  href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWstwNRSLDbGHvHKGqpDjJRBtspZBnvMxVzDxRWdxQlCXRTPCxsmWMdCZShVhPsXmwbXZsVng"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <Mail className="h-6 xmd:h-7 3xl:h-8 w-auto fill-accent-orange cursor-pointer" />
-                </span>
+                </a>
               </Tippy>
               <Tippy content="Github">
-                <span>
+                <a
+                  href="https://github.com/AdnanMGHaider"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <Github className="h-6 xmd:h-7 3xl:h-8 w-auto fill-accent-orange cursor-pointer" />
-                </span>
+                </a>
               </Tippy>
               <Tippy content="Linkedin">
-                <span>
+                <a
+                  href="https://www.linkedin.com/in/adnan-haider-58405a199/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <Linkedin className="h-6 xmd:h-7 3xl:h-8 w-auto fill-accent-orange cursor-pointer" />
-                </span>
+                </a>
               </Tippy>
             </div>
           </motion.div>
